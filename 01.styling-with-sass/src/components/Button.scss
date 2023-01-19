@@ -1,0 +1,81 @@
+$blue: rgb(47, 149, 207); // 주석!
+$pink: rgb(212, 66, 156);
+$gray: rgb(77, 77, 77); 
+
+@mixin button-color($color) { // 반복되는 코드가 있을경우 mixin 사용
+    background: $color;
+    &:hover {
+        background: lighten($color, 10%);
+    }
+
+    &:active {
+        background: darken($color, 10%);
+    }
+
+    &.outline {
+        color: $color;
+        background: none;
+        border: 1px solid $color;
+        &:hover {
+            background: $color;
+            color: white;
+        }
+    }
+}
+
+.Button {
+    display: inline-flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: $blue;
+    
+    &.large {
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.25rem;
+    }
+
+    &.medium {
+        height: 2.25rem;
+        line-height: 2.25rem;
+        font-size: 1rem;
+    }
+    
+    &.small {
+        height: 1.75rem;
+        line-height: 1.75rem;
+        font-size: 0.875rem;
+    }
+
+    &.blue {
+        @include button-color($blue)
+    }
+
+    &.pink {
+        @include button-color($pink)
+    }
+    
+    &.gray {
+        @include button-color($gray)
+    }
+
+    & + & {
+        margin-left: 1rem;
+    }
+
+    &.fullWidth {
+        width: 100%;
+        justify-content: center;
+        
+        & + & {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+}

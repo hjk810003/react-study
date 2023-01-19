@@ -1,0 +1,117 @@
+.Button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #2f95cf;
+}
+
+.Button.large {
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.25rem;
+}
+
+.Button.medium {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  font-size: 1rem;
+}
+
+.Button.small {
+  height: 1.75rem;
+  line-height: 1.75rem;
+  font-size: 0.875rem;
+}
+
+.Button.blue {
+  background: #2f95cf;
+}
+
+.Button.blue:hover {
+  background: #58aad9;
+}
+
+.Button.blue:active {
+  background: #2677a5;
+}
+
+.Button.blue.outline {
+  color: #2f95cf;
+  background: none;
+  border: 1px solid #2f95cf;
+}
+
+.Button.blue.outline:hover {
+  background: #2f95cf;
+  color: white;
+}
+
+.Button.pink {
+  background: #d4429c;
+}
+
+.Button.pink:hover {
+  background: #dd6cb2;
+}
+
+.Button.pink:active {
+  background: #b92a82;
+}
+
+.Button.pink.outline {
+  color: #d4429c;
+  background: none;
+  border: 1px solid #d4429c;
+}
+
+.Button.pink.outline:hover {
+  background: #d4429c;
+  color: white;
+}
+
+.Button.gray {
+  background: #4d4d4d;
+}
+
+.Button.gray:hover {
+  background: #676767;
+}
+
+.Button.gray:active {
+  background: #343434;
+}
+
+.Button.gray.outline {
+  color: #4d4d4d;
+  background: none;
+  border: 1px solid #4d4d4d;
+}
+
+.Button.gray.outline:hover {
+  background: #4d4d4d;
+  color: white;
+}
+
+.Button + .Button {
+  margin-left: 1rem;
+}
+
+.Button.fullWidth {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Button.fullWidth + .Button.fullWidth {
+  margin-left: 0;
+  margin-top: 1rem;
+}
